@@ -1,22 +1,28 @@
 <?php
-require_once 'bicycle.php';
+require_once 'Bicycle.php';
 require_once 'Cars.php';
+require 'Truck.php';
 
-$velib = new Bicycle('green');
+$renault = new Truck('green', 5, 100, 100,);
+var_dump ($renault->setLoading(99));
+var_dump ($renault->setLoading(200));
+echo 'The Renault ' . $renault->forward();
+echo $renault->brake();
+
+$velib = new Bicycle('green', 1);
 $bmw = new Car('black', 5, 'gazoil' );
 $aygo = new Car ('white', 4, 'fuel' );
-$bmx = new Bicycle ('white');
+$bmx = new Bicycle ('white', 1);
+
+echo 'The Bmw ' . $bmw->forward();
+echo $bmw->brake();
+
+echo 'The velib ' . $velib->forward();
+echo $velib->brake();
+
+echo 'The Aygo ' . $aygo->forward();
+echo $aygo->brake();
 
 
-echo 'The Bmw ' . $bmw->forward().PHP_EOL;
-echo $bmw->brake().PHP_EOL;
-
-echo 'The velib ' . $velib->forward().PHP_EOL;
-echo $velib->brake().PHP_EOL;
-
-echo 'The Aygo ' . $aygo->forward().PHP_EOL;
-echo $aygo->brake().PHP_EOL;
-
-
-echo 'The bmx ' . $bmx->forward().PHP_EOL;
-echo $bmx->brake().PHP_EOL;
+echo 'The bmx ' . $bmx->forward();
+echo $bmx->brake();
