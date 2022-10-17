@@ -2,6 +2,7 @@
 require_once 'Bicycle.php';
 require_once 'Cars.php';
 require 'Truck.php';
+require 'bus.php';
 
 $renault = new Truck('green', 5, 100, 100,);
 var_dump ($renault->setLoading(99));
@@ -26,3 +27,10 @@ echo $aygo->brake();
 
 echo 'The bmx ' . $bmx->forward();
 echo $bmx->brake();
+// POO3
+$tesla = new Car('black', 4, 'electric');
+$ferrari = new Car('red', 2, 'fuel');
+$schoolBus = new Bus('yellow', 5, 100, 100,);
+VAR_DUMP ($tesla);
+VAR_DUMP ($ferrari);
+
