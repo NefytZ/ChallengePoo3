@@ -46,12 +46,10 @@ class Car extends Vehicle
 
     public function setHasParkBrake()
     {
-        if ($this->hasParkBrake == true)
-        {
+        if ($this->hasParkBrake == true) {
             $this->hasParkBrake = false;
             return $this->start();
-        } elseif ($this->hasParkBrake == false)
-        {
+        } elseif ($this->hasParkBrake == false) {
             $this->hasParkBrake = true;
             return 'Mise du frein à main.';
         }
@@ -59,21 +57,18 @@ class Car extends Vehicle
     }
 
     public function getHasParkBrake(): bool
-      {   
+    {
         return $this->hasParkBrake;
-      }
-  
+    }
+
 
 
     public function start(): string
     {
-        if ($this->hasParkBrake === true)
-        {
+        if ($this->hasParkBrake === true) {
             throw new Exception('Impossible d\'avancer. Veuillez débloquer le frein à main.');
         } else {
             return "Moteur en marche, frein à main enlever, prêt à partir: Let's Go!";
         }
     }
-
-
 }
