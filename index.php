@@ -38,14 +38,4 @@ VAR_DUMP($ferrari);
 
 
 
-// Actionnement du frein à main au démarrage
-echo $ferrari->setHasParkBrake();
 
-try {
-    echo $ferrari->start() . PHP_EOL;
-} catch (Exception $exception) {
-    echo $exception->getMessage() . PHP_EOL;
-    echo $ferrari->setHasParkBrake() . PHP_EOL;
-} finally {
-    echo "Ma voiture roule comme un donut";
-}
