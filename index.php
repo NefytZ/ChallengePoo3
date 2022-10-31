@@ -1,6 +1,6 @@
 <?php
 require_once 'Bicycle.php';
-require_once 'Cars.php';
+require_once 'Car.php';
 require 'Truck.php';
 require 'bus.php';
 
@@ -33,4 +33,22 @@ $ferrari = new Car('red', 2, 'fuel');
 $schoolBus = new Bus('yellow', 5, 100, 100,);
 VAR_DUMP ($tesla);
 VAR_DUMP ($ferrari);
+
+
+
+
+
+// Actionnement du frein à main au démarrage
+echo $ferrari->setHasParkBrake();
+
+try {
+    echo $ferrari->start() . PHP_EOL;
+} catch (Exception $exception) {
+    echo $exception->getMessage() . PHP_EOL;
+    echo $ferrari->setHasParkBrake() . PHP_EOL;
+} finally {
+    echo "Ma voiture roule comme un donut";
+}
+
+
 
