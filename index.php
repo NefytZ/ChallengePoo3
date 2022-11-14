@@ -3,6 +3,7 @@ require_once 'Bicycle.php';
 require_once 'Car.php';
 require 'Truck.php';
 require 'bus.php';
+require_once 'speedometer.php';
 
 $renault = new Truck('green', 5, 100, 100,);
 var_dump($renault->setLoading(99));
@@ -33,6 +34,10 @@ $ferrari = new Car('red', 2, 'fuel');
 $schoolBus = new Bus('yellow', 5, 100, 100,);
 VAR_DUMP($tesla);
 VAR_DUMP($ferrari);
+
+//convertit les KM en MILES et les MILES en KM
+echo Speedometer::convertKmToMiles(10);
+echo Speedometer::convertMilesToKm(10);
 
 
 
